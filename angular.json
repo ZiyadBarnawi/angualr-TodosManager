@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angualr-TodosManager": {
+    "second-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angualr-TodosManager:build:production"
+              "buildTarget": "second-app:build:production"
             },
             "development": {
-              "buildTarget": "angualr-TodosManager:build:development"
+              "buildTarget": "second-app:build:development"
             }
           },
           "defaultConfiguration": "development"

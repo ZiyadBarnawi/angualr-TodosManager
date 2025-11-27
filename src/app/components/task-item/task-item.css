@@ -1,0 +1,31 @@
+li {
+  font-size: 1.6rem;
+  width: 30rem;
+  text-overflow: ellipsis;
+  background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
+  color: white;
+  border: none;
+  margin: 1rem 0rem;
+  border-radius: 1.5rem;
+  transition: 200ms;
+  overflow: visible;
+}
+
+.todo--active {
+  background-image: linear-gradient(rgb(150, 67, 188), rgb(55, 48, 59));
+}
+
+li:hover {
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+
+.badge--done {
+  transform: skewY(5deg) scale(1.2) translate(5px, -15px);
+  overflow: visible;
+  background-color: #1c7ed6;
+}
+.badge--yet {
+  transform: skewY(5deg) scale(1.2) translate(5px, -15px);
+  background-color: #f03e3e;
+}

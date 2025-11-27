@@ -1,0 +1,24 @@
+<div (click)="onCloseModal()" [class.backdrop]="isAddingTodo()"></div>
+<dialog #dialog [open]="isAddingTodo()">
+  <form action="">
+    <div style="width: 100%; display: flex; justify-content: center">
+      <div style="width: 10rem" class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">user ID</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Todo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Go to the store and get an apple 🍎"
+      />
+    </div>
+    <div class="btn-group d-flex justify-content-start">
+      <button (click)="onCloseModal()" class="btn btn-secondary" type="button">Cancel</button
+      ><button class="btn btn-success" type="submit">Add</button>
+    </div>
+  </form>
+</dialog>

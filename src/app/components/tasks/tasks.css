@@ -1,0 +1,21 @@
+section {
+  margin: 10rem 10rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+ul {
+  height: 30rem;
+}
+ul::-webkit-scrollbar,
+ul::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.spinner-border.text-light {
+  font-size: 2.4rem;
+  width: 10rem;
+  height: 10rem;
+}
+app-new-task-modal {
+  position: absolute;
+}

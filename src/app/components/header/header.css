@@ -1,0 +1,39 @@
+section {
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
+  color: #f1f3f5;
+}
+.modal-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: none;
+}
+.modal-dialog {
+  width: 20rem;
+}
+img {
+  width: 15rem;
+  transition: 200ms;
+  /* --bs-tooltip-bg: #333;
+  --bs-tooltip-color: #fff;
+  --bs-tooltip-padding-x: 1rem;
+  --bs-tooltip-padding-y: 0.7rem;
+  --bs-tooltip-border-radius: 10px;
+  --bs-tooltip-width: 10rem; */
+}
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

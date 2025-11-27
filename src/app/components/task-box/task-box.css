@@ -1,0 +1,41 @@
+section {
+  width: 30rem;
+  /* height: 15rem; */
+  padding: 2rem 1rem;
+  background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
+  border-radius: 1.5rem;
+}
+
+div {
+  position: relative;
+  color: #f1f3f5;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+}
+
+.complete-btn {
+  width: 2.8rem;
+  fill: white;
+}
+.complete-btn--completed {
+  width: 2.8rem;
+  fill: green;
+}
+
+.badge--done {
+  position: absolute;
+  right: 0;
+  transform: skewY(5deg) scale(1.2) translate(15px, -25px);
+  overflow: visible;
+  background-color: #1c7ed6;
+}
+.badge--yet {
+  position: absolute;
+  right: 0;
+  transform: skewY(5deg) scale(1.2) translate(15px, -25px);
+  background-color: #f03e3e;
+}

@@ -1,0 +1,31 @@
+<section>
+  @if(error()){
+
+  <h1 class="text-light">Something went very wrong :(</h1>
+  }@else { @if (loading()) {
+
+  <div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  }@else{ @if (isAddingTodo()) {
+
+  <app-new-task-modal
+    (isClosingModal)="onCLosingModal()"
+    [isAddingTodo]="isAddingTodo()"
+  ></app-new-task-modal>
+
+  }
+  <ul class="overflow-auto">
+    @for (_todo of todos(); track $index) {
+
+    <app-task-item
+      (selectedTodo)="onSelectTask($event)"
+      [selected]="todo().id === _todo.id"
+      [todo]="_todo"
+    ></app-task-item>
+    }
+  </ul>
+  <app-task-box (complete)="onToggleComplete($event)" [todo]="todo()"></app-task-box>
+
+  }}
+</section>
