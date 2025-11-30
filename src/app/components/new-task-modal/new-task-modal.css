@@ -1,8 +1,9 @@
 dialog {
   color: white;
+  font-size: 1.7rem;
   font-weight: 500;
   padding: 2rem;
-  width: 20rem;
+  width: 25rem;
   margin: auto;
   position: fixed;
   /* left: 40%;
@@ -28,6 +29,7 @@ dialog {
 dialog::backdrop {
   background-color: rgb(0, 0, 0);
 }
-/* .modal-backdrop {
-  align-items: center !important;
-} */
+button {
+  font-size: 1.7rem;
+  font-weight: 600;
+}

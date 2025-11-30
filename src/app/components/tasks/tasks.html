@@ -10,6 +10,7 @@
   }@else{ @if (isAddingTodo()) {
 
   <app-new-task-modal
+    (newTodo)="onNewTodo($event)"
     (isClosingModal)="onCLosingModal()"
     [isAddingTodo]="isAddingTodo()"
   ></app-new-task-modal>
@@ -20,7 +21,7 @@
 
     <app-task-item
       (selectedTodo)="onSelectTask($event)"
-      [selected]="todo().id === _todo.id"
+      [selected]="todo().id === _todo?.id"
       [todo]="_todo"
     ></app-task-item>
     }

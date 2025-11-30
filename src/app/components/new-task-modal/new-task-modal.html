@@ -1,18 +1,29 @@
 <div (click)="onCloseModal()" [class.backdrop]="isAddingTodo()"></div>
 <dialog #dialog [open]="isAddingTodo()">
-  <form action="">
+  <form (ngSubmit)="onSubmit()" name="form" action="">
     <div style="width: 100%; display: flex; justify-content: center">
       <div style="width: 10rem" class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">user ID</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+        <input
+          [(ngModel)]="inputId"
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          name="id"
+          placeholder=""
+        />
       </div>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Todo</label>
+      <!-- TIP: Directives are: classes that add additional behavior to elements in your Angular applications. -->
+      <!-- TIP: Components can be classified as directives, but the have a template -->
       <input
+        [(ngModel)]="inputTitle"
         type="text"
         class="form-control"
         id="exampleFormControlInput1"
+        name="todo"
         placeholder="Go to the store and get an apple 🍎"
       />
     </div>

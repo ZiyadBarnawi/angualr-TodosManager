@@ -19,8 +19,9 @@ export class Tasks implements OnInit {
   loading = signal<boolean>(true);
   error = signal<boolean>(false);
   todos = signal<Array<Todo>>([]);
-  todo = signal<Todo>({ id: 0, userId: 0, completed: false, todo: '' });
+  todo = signal<Todo>({ id: '0', userId: 0, completed: false, todo: '' });
   isAddingTodo = input<boolean>(false);
+  newTodo = input<Todo>();
   isCLosingModal = output<boolean>();
 
   async ngOnInit(): Promise<void> {
@@ -33,7 +34,7 @@ export class Tasks implements OnInit {
         })
       )
       .subscribe((data: any) => {
-        console.log(data.todos);
+        console.log(data);
         this.loading.set(false);
         this.todos.set(data.todos);
         this.todo.set(data.todos[0]);
@@ -48,5 +49,14 @@ export class Tasks implements OnInit {
   };
   onCLosingModal(): void {
     this.isCLosingModal.emit(true);
+  }
+  onNewTodo(todo: Todo) {
+    console.log(todo);
+
+    this.todos.update((todos) => {
+      todo.id = `${todos.length + 1}`;
+      todos.push(todo);
+      return todos;
+    });
   }
 }
