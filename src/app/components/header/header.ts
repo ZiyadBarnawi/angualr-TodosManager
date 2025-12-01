@@ -13,7 +13,6 @@ export class Header {
   http = inject(Http);
   isAddingTodo = output<boolean>();
   openAddModal = async () => {
-    console.log('Open modal event emitted!');
     this.isAddingTodo.emit(true);
   };
 }

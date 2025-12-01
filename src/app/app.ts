@@ -14,7 +14,6 @@ export class App {
   isAddingTodo = signal<boolean>(false);
 
   openAddModal = () => {
-    console.log('Open modal event received');
     this.isAddingTodo.set(true);
   };
   closeModal(): void {

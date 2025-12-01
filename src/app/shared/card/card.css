@@ -1,0 +1,11 @@
+div {
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
+  background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
+  color: white;
+  border: none;
+  margin: 1rem 0rem;
+  border-radius: 1.5rem;
+  transition: 200ms;
+  overflow: visible;
+}

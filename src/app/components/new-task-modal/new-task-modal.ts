@@ -27,8 +27,6 @@ export class NewTaskModal {
     this.isClosingModal.emit(true);
   }
   async onSubmit(): Promise<void> {
-    console.log(` ID: ${this.inputId}`);
-    console.log(` Title: ${this.inputTitle}`);
     if (!parseInt(this.inputId)) {
       throw new Error('The entered ID is not a number');
     }
@@ -46,7 +44,6 @@ export class NewTaskModal {
         })
       )
       .subscribe((todo) => {
-        console.log(todo);
         this.newTodo.emit(todo as Todo);
       });
   }

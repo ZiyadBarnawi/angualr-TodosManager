@@ -1,21 +1,28 @@
-li {
+/* app-card {
   font-size: 1.6rem;
   width: 30rem;
   text-overflow: ellipsis;
   background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
-  color: white;
   border: none;
   margin: 1rem 0rem;
   border-radius: 1.5rem;
   transition: 200ms;
   overflow: visible;
+  } */
+app-card {
+  width: 30rem;
+}
+li {
+  color: white;
+  background-image: linear-gradient(rgb(81, 64, 89), rgb(55, 48, 59));
+  border: none;
 }
 
 .todo--active {
   background-image: linear-gradient(rgb(150, 67, 188), rgb(55, 48, 59));
 }
 
-li:hover {
+app-card:hover {
   transform: translateY(-0.5rem);
   cursor: pointer;
 }

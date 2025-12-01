@@ -1,23 +1,23 @@
-<section>
-  <div>
-    <h3>Task: {{ todo()?.id }} - {{ todo()?.todo || 'Un-defined' }}</h3>
-    <!-- <span>Task ID: {{ todo()?.id }}</span> -->
-    <span>User ID: {{ todo()?.userId }}</span>
-    @if (todo()?.completed) {<span class="badge badge--done rounded-pill">Done</span>} @else {<span
-      class="badge badge--yet rounded-pill"
-      >Yet</span
-    >}
-    <div
-      [class.complete-btn--completed]="todo()?.completed"
-      (click)="onToggleComplete()"
-      class="complete-btn"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-        <rect width="256" height="256" fill="none" />
-        <path
-          d="M243.31,90.91l-128.4,128.4a16,16,0,0,1-22.62,0l-71.62-72a16,16,0,0,1,0-22.61l20-20a16,16,0,0,1,22.58,0L104,144.22l96.76-95.57a16,16,0,0,1,22.59,0l19.95,19.54A16,16,0,0,1,243.31,90.91Z"
-        />
-      </svg>
+<app-card>
+  <section>
+    <div>
+      <h3>Task: {{ todo()?.id }} - {{ todo()?.todo || 'Un-defined' }}</h3>
+      <!-- <span>Task ID: {{ todo()?.id }}</span> -->
+      <span>Due: {{ '2025-11-30' | date : 'short' }}</span>
+      @if (todo()?.completed) {<span class="badge badge--done rounded-pill">Done</span>} @else
+      {<span class="badge badge--yet rounded-pill">Yet</span>}
+      <div
+        [class.complete-btn--completed]="todo()?.completed"
+        (click)="onToggleComplete()"
+        class="complete-btn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <path
+            d="M243.31,90.91l-128.4,128.4a16,16,0,0,1-22.62,0l-71.62-72a16,16,0,0,1,0-22.61l20-20a16,16,0,0,1,22.58,0L104,144.22l96.76-95.57a16,16,0,0,1,22.59,0l19.95,19.54A16,16,0,0,1,243.31,90.91Z"
+          />
+        </svg>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</app-card>

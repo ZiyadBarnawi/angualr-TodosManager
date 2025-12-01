@@ -1,15 +1,16 @@
 <div>
   <ul class="list-group">
-    <li
-      (click)="onTodoCLicked()"
-      [class.todo--active]="selected()"
-      class="list-group-item d-flex justify-content-between align-items-start"
-    >
-      <div class="ms-2 me-auto">
-        <div class="fw-bold">{{ todo()?.id }} - {{ todo()?.todo }}</div>
-      </div>
-      @if (todo()?.completed) {<span class="badge badge--done rounded-pill">Done</span>} @else
-      {<span class="badge badge--yet rounded-pill">Yet</span>}
-    </li>
+    <app-card (click)="onTodoCLicked()">
+      <li
+        [class.todo--active]="selected()"
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{ todo()?.id }} - {{ todo()?.todo }}</div>
+        </div>
+        @if (todo()?.completed) {<span class="badge badge--done rounded-pill">Done</span>} @else
+        {<span class="badge badge--yet rounded-pill">Yet</span>}
+      </li>
+    </app-card>
   </ul>
 </div>

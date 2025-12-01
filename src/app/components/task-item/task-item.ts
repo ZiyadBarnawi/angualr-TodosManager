@@ -1,10 +1,11 @@
 import { Component, EventEmitter, input, output, signal } from '@angular/core';
 import { single } from 'rxjs';
 import { Todo } from '../../models/todo.model';
+import { Card } from '../../shared/card/card';
 
 @Component({
   selector: 'app-task-item',
-  imports: [],
+  imports: [Card],
   templateUrl: './task-item.html',
   styleUrl: './task-item.css',
 })

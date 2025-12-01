@@ -34,7 +34,6 @@ export class Tasks implements OnInit {
         })
       )
       .subscribe((data: any) => {
-        console.log(data);
         this.loading.set(false);
         this.todos.set(data.todos);
         this.todo.set(data.todos[0]);
@@ -51,8 +50,6 @@ export class Tasks implements OnInit {
     this.isCLosingModal.emit(true);
   }
   onNewTodo(todo: Todo) {
-    console.log(todo);
-
     this.todos.update((todos) => {
       todo.id = `${todos.length + 1}`;
       todos.push(todo);
