@@ -2,7 +2,7 @@
   <section>
     <div>
       <h3>Task: {{ todo()?.id }} - {{ todo()?.todo || 'Un-defined' }}</h3>
-      <!-- <span>Task ID: {{ todo()?.id }}</span> -->
+      <!-- TIP: pipes | allow you to format data such as dates -->
       <span>Due: {{ '2025-11-30' | date : 'short' }}</span>
       @if (todo()?.completed) {<span class="badge badge--done rounded-pill">Done</span>} @else
       {<span class="badge badge--yet rounded-pill">Yet</span>}
